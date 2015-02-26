@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B70B98D-35F6-4267-A181-7D85D708D4C7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>R3.SP.CountdownApp</RootNamespace>
+    <AssemblyName>R3.SP.CountdownApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>16.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <MinimumOfficeToolsVersion>12.1</MinimumOfficeToolsVersion>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{0ce1b65f-a218-45f9-add0-0d34408dea8c}</AppFeaturePartId>
+    <WspPartId>{62ea55a8-a73e-4198-baa2-c3fcd16407e7}</WspPartId>
+    <WorkflowPartId>{e7642937-3eed-428a-a8ac-3c4ccbf40637}</WorkflowPartId>
+    <CspkgPartId>{a2d2d1c2-5153-407c-9b7a-e9731f073f54}</CspkgPartId>
+    <SqlPackagePartId>{c8157a6a-eb8d-4880-a6f4-34917c48f3e7}</SqlPackagePartId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="CountdownWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{79d19482-2b3d-42cd-ab41-f3d74972ac02}</SharePointProjectItemId>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3b5e48ca-373f-46f7-baba-0069fd677c27}</SharePointProjectItemId>
+    </None>
+    <Content Include="Content\countdownGlowing.gif" />
+    <Content Include="Content\countdownLED.png" />
+    <Content Include="Images\InsertAppPart.png" />
+    <Content Include="Content\jquery.countdown.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="CountdownWebPart\Elements.xml">
+      <OpcRelationship>feature-elementmanifest</OpcRelationship>
+    </Content>
+    <Content Include="Pages\CountdownWebPart.aspx" />
+    <Content Include="Pages\Default.aspx" />
+    <Content Include="Pages\Elements.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\jquery-1.11.2.min.map">
+      <DependentUpon>jquery-1.11.2.js</DependentUpon>
+    </None>
+    <None Include="Scripts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c8157a6a-eb8d-4880-a6f4-34917c48f3e7}</SharePointProjectItemId>
+    </None>
+    <Content Include="Pages\index.html" />
+    <Content Include="Scripts\Elements.xml" />
+    <Content Include="Scripts\jquery-1.11.2.intellisense.js">
+      <DependentUpon>jquery-1.11.2.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery-1.11.2.js" />
+    <Content Include="Scripts\jquery-1.11.2.min.js">
+      <DependentUpon>jquery-1.11.2.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery-extensions.js" />
+    <Content Include="Scripts\jquery-ui-1.11.3.js" />
+    <Content Include="Scripts\jquery-ui-1.11.3.min.js">
+      <DependentUpon>jquery-ui-1.11.3.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-ar.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-bg.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-bn.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-bs.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-ca.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-cs.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-cy.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-da.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-de.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-el.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-es.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-et.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-fa.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-fi.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-fo.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-fr.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-gl.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-gu.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-he.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-hr.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-hu.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-hy.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-id.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-is.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-it.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-ja.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-kn.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-ko.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-lt.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-lv.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-ml.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-ms.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-my.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-nb.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-nl.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-pl.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-pt-BR.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-ro.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-ru.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-sk.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-sl.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-sq.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-sr-SR.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-sr.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-sv.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-th.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-tr.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-uk.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-ur.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-uz.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-vi.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-zh-CN.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown-zh-TW.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.countdown.js" />
+    <Content Include="Scripts\jquery.countdown.min.js">
+      <DependentUpon>jquery.countdown.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.plugin.js" />
+    <Content Include="Scripts\jquery.plugin.min.js">
+      <DependentUpon>jquery.plugin.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\moment-with-locales.js">
+      <DependentUpon>moment.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\moment-with-locales.min.js">
+      <DependentUpon>moment.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js">
+      <DependentUpon>moment.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\twix.min.js" />
+    <Content Include="Scripts\_references.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d649440b-2b49-484b-a3d2-49e1997bf6ff}</SharePointProjectItemId>
+    </None>
+    <Content Include="Content\Elements.xml" />
+    <Content Include="Content\App.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\AppIcon.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
+    <Content Include="Images\Elements.xml" />
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b4781388-f895-46cb-acd6-7a0f6cb14b50}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package\Package.package">
+      <PackageId>{949efcb4-a757-40f4-abbb-c0ab201c49b0}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{948866e6-57b6-420f-ac15-0e40be8a8f42}</FeatureId>
+    </None>
+    <None Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

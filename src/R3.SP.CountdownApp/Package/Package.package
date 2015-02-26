@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="949efcb4-a757-40f4-abbb-c0ab201c49b0" 
+        solutionId="949efcb4-a757-40f4-abbb-c0ab201c49b0" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="R3.SP.CountdownApp"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="948866e6-57b6-420f-ac15-0e40be8a8f42" />
+  </features>
+</package>
