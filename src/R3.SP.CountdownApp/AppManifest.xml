@@ -9,6 +9,9 @@
   <Properties>
     <Title>Countdown Web Part</Title>
     <StartPage>~appWebUrl/Pages/Default.aspx?{StandardTokens}</StartPage>
+    <SupportedLocales>
+      <SupportedLocale CultureName="en-US" />
+    </SupportedLocales>
   </Properties>
 
   <AppPrincipal>
